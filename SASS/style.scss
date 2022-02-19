@@ -1,0 +1,407 @@
+@import url(responsive.scss);
+$tamnoplava:#064472;
+$svetloplava:#1D80DB;
+$ledenoplava:#A8CEFF;
+$headertekst:#fff;
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto',sans-serif;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Integra';
+    src: url(../Integral-www.Dfonts.org/OTF/IntegralCF-Bold.otf);
+}
+
+header{
+    height: 40vh;
+    width: 100%;
+    background-color:$tamnoplava;
+    position: relative;
+    ul{
+        padding: 20px;
+    }
+    .logo{
+        float: left;
+        display: inline-flex;
+        justify-content: center;
+        padding: 20px;
+        position:absolute;
+    }
+}
+
+
+.first_letter{
+    color: #fff;
+}
+.second_letter{
+    color: #1D80DB;
+}
+nav{
+    text-align: center;
+}
+.navigacija ul{
+    margin-right: 20px;
+    display: inline-flex;
+    list-style: none;
+    
+    
+}
+.navigacija ul li{
+    margin: 10px;
+}
+.navigacija ul li a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.header_text{
+    position: relative;
+   
+   height: 100%;
+   margin: 30px auto;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+   display: flex;
+   align-items: center;
+    h1{
+        font-family: 'Integra';
+        color: $ledenoplava;
+        font-size: 60px;
+        
+}
+    p{
+        color: #fff;
+    }  
+} 
+.waves_blok{
+    background-color: $tamnoplava;
+    margin-top: -2px;
+    .wave_one{
+        position: absolute;
+        margin-top: 40px;
+        z-index: 3;
+    }
+    .wave_two{
+        background-color: $tamnoplava;
+        z-index: 2;
+    }
+}
+
+
+
+.blok1 {
+    
+    position: relative;
+    margin-top: 10px;
+}
+.blok1 h1{
+    color: #000;
+}
+@mixin btn{
+    padding:10px 10px;
+    text-align: center;
+    margin:1em ;
+    width: 150px;
+    background-color: $svetloplava;
+    cursor: pointer;
+    color: #fff;
+}
+
+.action_button{
+    display: flex;
+    text-align: center;
+    .contact_button,.cv_button{
+        @include btn;
+        a{
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold; 
+        }
+    }
+    
+}
+#lap-top {
+    display: flex;
+    justify-content: center;
+    
+}
+.services-heading h2{
+    text-align: center;
+    color: $svetloplava;
+    padding-top: 3em;
+    font-family: 'Integra';
+}
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    margin-top: 5em;
+    width: 100%;
+    align-items: center;
+    
+}
+.img-effect {
+    img{
+    width: 100px;
+    height: 100px;
+    }
+}
+@mixin box{
+    display: block;
+    box-shadow: 4px 4px 4px 0px #ddd;
+    border-radius: 10px;
+    width: 20%;
+    margin:1%;
+    text-align: center;
+    margin-bottom: 50px;}
+.service{
+    @include box;
+}
+
+.service h3{
+    font-family: 'Integra';
+    margin:10px 0 20px 0 ;
+    color: $svetloplava;
+    padding: 20px 0 0 0;
+}
+.service p{
+    width: 50px/2 * 10;
+    margin: auto;
+    padding-bottom: 10px;
+}
+.img-effect {
+    margin:30px auto;
+    margin-top: 0;
+    padding-top: 30px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+}
+.bg-color{
+    background-color: $svetloplava;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+}
+.about-me{
+    width: 100%;
+    background-color:$tamnoplava;
+    .about-me-heading h2{
+        text-align: center;
+        padding: 20px;
+        font-family: 'Integra';
+        color: #A8CEFF;
+    }
+    .about-me-paragraph{
+        text-align: center;
+        margin-top: -15px;
+        color: #fff;
+
+    }
+    .about-me-blok{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        gap: 20%;
+    }
+}
+
+
+#me img{
+    size: 300px;
+    height: 500px;
+    
+}
+#text-about-me{
+width: 300px;
+font-size: 18px;
+border: 3px solid $ledenoplava;
+padding: 20px;
+border-radius: 20px 0 20px 0;
+color: #fff;
+
+}
+.under-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+.front-layer{
+    width: 100%;
+    height: 7em;
+    background: #fff;
+    position: relative;
+    margin-top: -100px;
+}
+.skills-header h2{
+    text-align: center;
+    font-family: 'Integra';
+    color: $svetloplava;
+} 
+.skills{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.skills-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    .skill{
+        @include box;
+        margin: 3%;
+        h3{
+            padding: 2em;
+            text-align: center;
+            background-color: $svetloplava;
+            border-radius: 10px 10px 0 0;
+            color: #A8CEFF;
+        }
+        p{
+            width: 50%;
+            margin: 30px auto ;
+        }
+    }
+}
+@mixin project-h2{
+    text-align: center;
+        margin-top: 20px;
+        font-family: 'Integra',sans-serif;
+        color: #1D80DB;
+}
+@mixin project-wrapper{
+    display: flex;
+        justify-content: space-around;
+        margin-top: 2em;
+        align-items: center;
+}
+@mixin project-blok{
+    text-align: center;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px #ddd;
+}
+@mixin projects-img{
+    
+        border-radius: 10px 10px 0 0;
+}
+@mixin description-text{
+        color:#fff;
+            font-weight: bold;
+            margin-top: 10px;
+            width: fit-content;
+            background-color: $ledenoplava;
+            margin: 10px auto;
+            border-radius: 10px;
+            padding: 3px;
+}
+@mixin hr{
+    margin: auto;
+    width: 120px;
+    height: 5px;
+    background-color: $svetloplava;
+    outline: none;
+    border: none;
+
+}
+.projects{
+    h2{
+        text-align: center;
+        margin-top: 20px;
+        font-family: 'Integra',sans-serif;
+        color: #1D80DB;
+    }
+    
+    .btn{
+        @include btn;
+        text-align: center;
+        margin:auto;
+        color: #fff;
+        margin: 30px auto;
+    }
+}
+    
+.project-header3{
+    text-align: center;
+    margin-top: 20px;
+}
+    .projects-wrapper{
+        @include project-wrapper;
+        
+        .project-blok{
+            @include project-blok;
+            
+            .projects-img{
+                img{@include projects-img;}
+            }
+            .description-text{
+                @include description-text;
+            }
+            .btn{
+                @include btn;
+                margin: 1em auto ;
+                
+            }
+        }
+        
+    }
+
+hr{
+    @include hr;
+}
+.testimonials{
+    h2{
+        color: $svetloplava;
+        text-align: center;
+        margin-top: 20px;
+        font-family: 'Integra';
+        
+    }
+    p{
+        text-align: center;
+    }
+    .testimonials-block{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        vertical-align: middle;
+        margin: 30px auto;
+        .client-profile{
+            display: block;
+            text-align: center;
+            p{
+                color: $svetloplava;
+                font-weight: bold;
+            }
+            img{
+                width: 75px;
+                height: 75px;
+                border-radius: 50%;
+            }
+        }
+        .inner-block{
+            display: flex;
+            flex-direction: column;
+            vertical-align: middle;
+            justify-content: center;
+            align-items: center;
+            margin: 3em;
+            width: 30%;
+            text-align: center;
+            p{
+                font-size: 18px;
+            }
+            .stars{
+                font-size: 23px;
+                color: $svetloplava;
+            }
+        }
+    }
+}
+
+
