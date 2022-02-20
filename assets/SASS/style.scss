@@ -6,14 +6,18 @@ $headertekst:#fff;
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Roboto',sans-serif;
     box-sizing: border-box;
 }
 @font-face {
     font-family: 'Integra';
     src: url(../Integral-www.Dfonts.org/OTF/IntegralCF-Bold.otf);
 }
-
+p,a{
+    font-family: 'Open Sans', sans-serif;
+}
+h1,h2,h3{
+    font-family: 'Montserrat', sans-serif;
+}
 header{
     height: 40vh;
     width: 100%;
@@ -67,7 +71,7 @@ nav{
    display: flex;
    align-items: center;
     h1{
-        font-family: 'Integra';
+        /*font-family: 'Integra';*/
         color: $ledenoplava;
         font-size: 60px;
         
@@ -132,7 +136,7 @@ nav{
     text-align: center;
     color: $svetloplava;
     padding-top: 3em;
-    font-family: 'Integra';
+    /*font-family: 'Integra';*/
 }
 .services{
     display: flex;
@@ -151,7 +155,7 @@ nav{
 }
 @mixin box{
     display: block;
-    box-shadow: 4px 4px 4px 0px #ddd;
+    box-shadow: 0 4px 4px 4px #ddd;
     border-radius: 10px;
     width: 20%;
     margin:1%;
@@ -162,7 +166,7 @@ nav{
 }
 
 .service h3{
-    font-family: 'Integra';
+     /*font-family: 'Integra';*/
     margin:10px 0 20px 0 ;
     color: $svetloplava;
     padding: 20px 0 0 0;
@@ -187,18 +191,23 @@ nav{
     padding: 10px;
 }
 .about-me{
-    width: 100%;
-    background-color:$tamnoplava;
+    width: 75%;
+    background-color:#fff;
+    margin: auto;
+    border-top: 10px solid $svetloplava;
+    border-bottom: 10px solid $svetloplava;
+    box-shadow: 0 6px 6px 6px #ddd;
+    margin-bottom: 30px;
     .about-me-heading h2{
         text-align: center;
         padding: 20px;
-        font-family: 'Integra';
-        color: #A8CEFF;
+         /*font-family: 'Integra';*/
+        color: $svetloplava;
     }
     .about-me-paragraph{
         text-align: center;
         margin-top: -15px;
-        color: #fff;
+        color: #000;
 
     }
     .about-me-blok{
@@ -211,18 +220,32 @@ nav{
 }
 
 
-#me img{
+#me {
+    img{
     size: 300px;
-    height: 500px;
-    
+    height: 500px;}
+    .front-layer{
+        width: 100%;
+        height: 10em;
+        background: linear-gradient(1deg,white 40%,transparent);
+        position: relative;
+        margin-top: -140px;
+    }
 }
 #text-about-me{
-width: 300px;
-font-size: 18px;
-border: 3px solid $ledenoplava;
-padding: 20px;
-border-radius: 20px 0 20px 0;
-color: #fff;
+    display: block;
+    .line1{
+    display: flex;
+    margin: 35px auto;
+    flex-direction: row;
+    h3{
+        color: $svetloplava;
+    }
+p{
+    color: #000;
+    text-align: start;
+}
+}
 
 }
 .under-button{
@@ -230,16 +253,10 @@ color: #fff;
     flex-direction: column;
     align-items: center;
    }
-.front-layer{
-    width: 100%;
-    height: 7em;
-    background: #fff;
-    position: relative;
-    margin-top: -100px;
-}
+
 .skills-header h2{
     text-align: center;
-    font-family: 'Integra';
+     /*font-family: 'Integra';*/
     color: $svetloplava;
 } 
 .skills{
@@ -272,7 +289,7 @@ color: #fff;
 @mixin project-h2{
     text-align: center;
         margin-top: 20px;
-        font-family: 'Integra',sans-serif;
+         /*font-family: 'Integra';*/
         color: #1D80DB;
 }
 @mixin project-wrapper{
@@ -313,7 +330,7 @@ color: #fff;
     h2{
         text-align: center;
         margin-top: 20px;
-        font-family: 'Integra',sans-serif;
+         /*font-family: 'Integra';*/
         color: #1D80DB;
     }
     
@@ -359,7 +376,7 @@ hr{
         color: $svetloplava;
         text-align: center;
         margin-top: 20px;
-        font-family: 'Integra';
+         /*font-family: 'Integra';*/
         
     }
     p{

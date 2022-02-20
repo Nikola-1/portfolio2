@@ -82,8 +82,12 @@
 }
 #text-about-me {
   font-size: 18px;
-  width: 250px;
+  width: fit-content;
   margin-bottom: 30px;
+  .line1{
+    margin: 20px auto;
+    
+  }
 }
 
 .skill{
@@ -156,6 +160,7 @@
     }
   }
 }
+
 }
 @media(max-width:767px){
   .about-me-blok{
@@ -221,6 +226,13 @@
       }
     }
   }
+  .about-me{
+    .about-me-blok{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+  
 }
 @media (min-width:1024px){
   #lap-top{
