@@ -68,7 +68,7 @@
     
 }
 .service{
-  width: 50%;
+  width: 70%;
   p{
     width: fit-content;
   }
@@ -77,8 +77,8 @@
   flex-direction: column-reverse;
 }
 #me img{
-  height: 300px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
 }
 .about-me{
 width: 100%;
@@ -89,7 +89,7 @@ width: 100%;
   margin-bottom: 30px;
   .line1{
     margin: 20px auto;
-    
+    line-height: 20px;
   }
 }
 }
@@ -224,11 +224,15 @@ width: 100%;
 @media(max-width:911px){
   .about-me{
     width: 100%;
+    .about-me-blok{
+      gap:10%;
+    }
   }
 }
 @media(min-width:912px){
   .about-me{
     width: 100%;
+    
   }
 }
 @media(max-width:1023px){

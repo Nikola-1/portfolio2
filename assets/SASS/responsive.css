@@ -60,7 +60,7 @@
     padding-top: 150px;
   }
   .service {
-    width: 50%;
+    width: 70%;
   }
   .service p {
     width: -webkit-fit-content;
@@ -74,8 +74,8 @@
             flex-direction: column-reverse;
   }
   #me img {
-    height: 300px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
   }
   .about-me {
     width: 100%;
@@ -89,6 +89,7 @@
   }
   .about-me #text-about-me .line1 {
     margin: 20px auto;
+    line-height: 20px;
   }
   .skill {
     width: 70% !important;
@@ -223,6 +224,9 @@
 @media (max-width: 911px) {
   .about-me {
     width: 100%;
+  }
+  .about-me .about-me-blok {
+    gap: 10%;
   }
 }
 
