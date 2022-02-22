@@ -8,14 +8,60 @@ $headertekst:#fff;
     margin: 0;
     box-sizing: border-box;
 }
+@mixin project-h2{
+    text-align: center;
+        margin-top: 20px;
+         
+        color: #1D80DB;
+}
+@mixin project-wrapper{
+    display: flex;
+        justify-content: space-around;
+        margin-top: 2em;
+        align-items: center;
+}
+@mixin project-blok{
+    text-align: center;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px #ddd;
+}
+@mixin projects-img{
+    
+        border-radius: 10px 10px 0 0;
+}
+@mixin description-text{
+        color:#fff;
+            font-weight: bold;
+            margin-top: 10px;
+            width: fit-content;
+            background-color: $ledenoplava;
+            margin: 10px auto;
+            border-radius: 10px;
+            padding: 3px;
+}
+@mixin description-img{
+    width: 40px;
+    height: 40px;
+}
+@mixin hr{
+    margin: auto;
+    width: 120px;
+    height: 5px;
+    background-color: $svetloplava;
+    outline: none;
+    border: none;
 
-p,a{
+}
+
+    
+
+    p,a{
     font-family: 'Open Sans', sans-serif;
 }
-h1,h2,h3{
+    h1,h2,h3{
     font-family: 'Montserrat', sans-serif;
 }
-header{
+    header{
     height: 40vh;
     width: 100%;
     background-color:$tamnoplava;
@@ -300,50 +346,7 @@ p{
         }
     }
 }
-@mixin project-h2{
-    text-align: center;
-        margin-top: 20px;
-         
-        color: #1D80DB;
-}
-@mixin project-wrapper{
-    display: flex;
-        justify-content: space-around;
-        margin-top: 2em;
-        align-items: center;
-}
-@mixin project-blok{
-    text-align: center;
-        border-radius: 10px;
-        box-shadow: 3px 3px 3px #ddd;
-}
-@mixin projects-img{
-    
-        border-radius: 10px 10px 0 0;
-}
-@mixin description-text{
-        color:#fff;
-            font-weight: bold;
-            margin-top: 10px;
-            width: fit-content;
-            background-color: $ledenoplava;
-            margin: 10px auto;
-            border-radius: 10px;
-            padding: 3px;
-}
-@mixin description-img{
-    width: 40px;
-    height: 40px;
-}
-@mixin hr{
-    margin: auto;
-    width: 120px;
-    height: 5px;
-    background-color: $svetloplava;
-    outline: none;
-    border: none;
 
-}
 .projects{
     h2{
         text-align: center;
@@ -406,6 +409,7 @@ hr{
 .testimonials{
     .testimonials-wrapper{
         display: flex;
+        margin-top: 30px;
     }
     h2{
         color: $svetloplava;
@@ -463,7 +467,120 @@ hr{
         }
     }
 }
-
-
-
+/*.contact{
+    .contact-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin: auto;
+        background-color: $svetloplava;
+        box-shadow: 0 4px 4px 4px #ddd;
+    }
+    .contact-me-section{
+        background-color: #fff;
+        padding: 30px;
+        img{
+            width:300px ;
+            height: 300px;
+            margin-top: 100px;
+        }
+    }
+    .input-section{
+        background-color: $svetloplava;
+        width: 200px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        input{
+            outline: none;
+            border: none;
+            width: 300px;
+            height: 50px;
+            margin: 30px;
+            border-radius: 20px;
+            &::placeholder{
+                padding-left: 10px;
+            }
+        }
+        textarea{
+            width: 300px;
+            height: 150px;
+            margin: 30px;
+            box-shadow: inset 0 4px 4px 4px #ddd;
+            resize: none;
+            border-radius: 20px;
+            &::placeholder{
+                padding-left:10px;
+            }    
+        }
+        
+    }
+}
+*/
+.contact{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 100px;
+}
+.contact-wrapper{
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 4px 4px #ddd;
+    .contact-me-block{
+        background-color: $svetloplava;
+        height: 100%;
+        color: #fff;
+        img{
+            width: 300px;
+            height: 300px;
+            margin-top: 50px;
+        }
+        h2{
+            position: relative;
+            text-align: center;
+        }
+    }
+    .input-block{
+        padding: 25px 40px;
+    }
+    .field{
+        width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+    }
+    textarea{
+        min-height: 150px;
+        resize: none;
+    }
+    .btn{
+        width: fit-content;
+        padding: 0.5rem 1rem;
+        outline: none;
+        border: none;
+        background-color: $svetloplava;
+        color: #fff;
+        font-size: 15px;
+        float: right;
+        margin: 10px;
+        i{
+            margin-left: 5px;
+        }
+    }
+}
 

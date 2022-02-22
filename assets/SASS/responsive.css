@@ -204,6 +204,9 @@
   .about-me .about-me-blok {
     gap: 10%;
   }
+  .contact-wrapper {
+    display: block;
+  }
   .testimonials-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

@@ -480,6 +480,7 @@ hr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 30px;
 }
 
 .testimonials h2 {
@@ -545,5 +546,147 @@ hr {
 .testimonials .client-name h3 {
   color: #1D80DB;
   font-size: 26px;
+}
+
+/*.contact{
+    .contact-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin: auto;
+        background-color: $svetloplava;
+        box-shadow: 0 4px 4px 4px #ddd;
+    }
+    .contact-me-section{
+        background-color: #fff;
+        padding: 30px;
+        img{
+            width:300px ;
+            height: 300px;
+            margin-top: 100px;
+        }
+    }
+    .input-section{
+        background-color: $svetloplava;
+        width: 200px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        input{
+            outline: none;
+            border: none;
+            width: 300px;
+            height: 50px;
+            margin: 30px;
+            border-radius: 20px;
+            &::placeholder{
+                padding-left: 10px;
+            }
+        }
+        textarea{
+            width: 300px;
+            height: 150px;
+            margin: 30px;
+            box-shadow: inset 0 4px 4px 4px #ddd;
+            resize: none;
+            border-radius: 20px;
+            &::placeholder{
+                padding-left:10px;
+            }    
+        }
+        
+    }
+}
+*/
+.contact {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 100px;
+}
+
+.contact-wrapper {
+  max-width: 850px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-shadow: 0 4px 4px 4px #ddd;
+          box-shadow: 0 4px 4px 4px #ddd;
+}
+
+.contact-wrapper .contact-me-block {
+  background-color: #1D80DB;
+  height: 100%;
+  color: #fff;
+}
+
+.contact-wrapper .contact-me-block img {
+  width: 300px;
+  height: 300px;
+  margin-top: 50px;
+}
+
+.contact-wrapper .contact-me-block h2 {
+  position: relative;
+  text-align: center;
+}
+
+.contact-wrapper .input-block {
+  padding: 25px 40px;
+}
+
+.contact-wrapper .field {
+  width: 100%;
+  border: 2px solid rgba(0, 0, 0, 0);
+  outline: none;
+  background-color: rgba(230, 230, 230, 0.6);
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.contact-wrapper textarea {
+  min-height: 150px;
+  resize: none;
+}
+
+.contact-wrapper .btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  background-color: #1D80DB;
+  color: #fff;
+  font-size: 15px;
+  float: right;
+  margin: 10px;
+}
+
+.contact-wrapper .btn i {
+  margin-left: 5px;
 }
 /*# sourceMappingURL=style.css.map */
