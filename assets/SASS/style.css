@@ -6,11 +6,6 @@
           box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'Integra';
-  src: url(../Integral-www.Dfonts.org/OTF/IntegralCF-Bold.otf);
-}
-
 p, a {
   font-family: 'Open Sans', sans-serif;
 }
@@ -74,7 +69,7 @@ nav {
 
 .header_text {
   position: relative;
-  height: 100%;
+  height: 90%;
   margin: 30px auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -93,7 +88,6 @@ nav {
 }
 
 .header_text h1 {
-  /*font-family: 'Integra';*/
   color: #A8CEFF;
   font-size: 60px;
 }
@@ -163,7 +157,6 @@ nav {
   text-align: center;
   color: #1D80DB;
   padding-top: 3em;
-  /*font-family: 'Integra';*/
 }
 
 .services {
@@ -198,7 +191,6 @@ nav {
 }
 
 .service h3 {
-  /*font-family: 'Integra';*/
   margin: 10px 0 20px 0;
   color: #1D80DB;
   padding: 20px 0 0 0;
@@ -244,7 +236,6 @@ nav {
 .about-me .about-me-heading h2 {
   text-align: center;
   padding: 20px;
-  /*font-family: 'Integra';*/
   color: #1D80DB;
 }
 
@@ -334,7 +325,6 @@ nav {
 
 .skills-header h2 {
   text-align: center;
-  /*font-family: 'Integra';*/
   color: #1D80DB;
 }
 
@@ -392,7 +382,6 @@ nav {
 .projects h2 {
   text-align: center;
   margin-top: 20px;
-  /*font-family: 'Integra';*/
   color: #1D80DB;
 }
 
@@ -487,11 +476,16 @@ hr {
   border: none;
 }
 
+.testimonials .testimonials-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .testimonials h2 {
   color: #1D80DB;
   text-align: center;
   margin-top: 20px;
-  /*font-family: 'Integra';*/
 }
 
 .testimonials p {
@@ -499,61 +493,57 @@ hr {
 }
 
 .testimonials .testimonials-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  vertical-align: middle;
-  margin: 30px auto;
+  width: 400px;
+  height: 300px;
+  display: block;
+  margin: 50px auto;
+  -webkit-box-shadow: 0 4px 4px 4px #ddd;
+          box-shadow: 0 4px 4px 4px #ddd;
+  border-radius: 10px;
+}
+
+.testimonials .testimonials-block .testimonials-bottom-border {
+  border-bottom: 1px solid #ddd;
 }
 
 .testimonials .testimonials-block .client-profile {
-  display: block;
   text-align: center;
-}
-
-.testimonials .testimonials-block .client-profile p {
-  color: #1D80DB;
-  font-weight: bold;
 }
 
 .testimonials .testimonials-block .client-profile img {
-  width: 75px;
-  height: 75px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
+  margin: -45px auto 20px;
+  -webkit-box-shadow: 0 2px 2px 2px #ddd;
+          box-shadow: 0 2px 2px 2px #ddd;
 }
 
-.testimonials .testimonials-block .inner-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  vertical-align: middle;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 3em;
-  width: 30%;
+.testimonials .testimonials-block .client-quote {
+  padding: 20px;
+}
+
+.testimonials .testimonials-block .client-quote p {
+  z-index: 6;
+  position: relative;
+}
+
+.testimonials .testimonials-block .client-quote i {
+  font-size: 60px;
+  position: absolute;
+  margin-top: -20px;
+  z-index: 4;
+  color: #A8CEFF;
+}
+
+.testimonials .client-name {
   text-align: center;
+  font-family: 'Montserrat';
+  padding: 15px;
 }
 
-.testimonials .testimonials-block .inner-block p {
-  font-size: 18px;
-}
-
-.testimonials .testimonials-block .inner-block .stars {
-  font-size: 23px;
+.testimonials .client-name h3 {
   color: #1D80DB;
+  font-size: 26px;
 }
 /*# sourceMappingURL=style.css.map */

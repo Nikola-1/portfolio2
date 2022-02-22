@@ -60,7 +60,7 @@
     padding-top: 150px;
   }
   .service {
-    width: 70%;
+    width: 60%;
   }
   .service p {
     width: -webkit-fit-content;
@@ -105,19 +105,13 @@
     height: 150px;
   }
   .testimonials-block {
+    width: 75% !important;
+  }
+  .testimonials-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .testimonials-block .inner-block {
-    margin: 1em !important;
-    width: -webkit-fit-content !important;
-    width: -moz-fit-content !important;
-    width: fit-content !important;
-  }
-  .testimonials-block .inner-block p {
-    width: 350px;
   }
 }
 
@@ -150,15 +144,6 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .testimonials-block {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .testimonials-block .inner-block p {
-    width: 350px;
   }
 }
 
@@ -206,15 +191,6 @@
   .projects-wrapper .project-blok {
     margin: 20px auto;
   }
-  .testimonials-block {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .testimonials-block .inner-block p {
-    width: 350px;
-  }
   .projects-img img {
     width: 250px;
     height: 150px;
@@ -228,11 +204,22 @@
   .about-me .about-me-blok {
     gap: 10%;
   }
+  .testimonials-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 @media (min-width: 912px) {
   .about-me {
     width: 100%;
+  }
+  .testimonials-wrapper {
+    gap: 2%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
@@ -275,21 +262,6 @@
   }
   .skill {
     width: 40% !important;
-  }
-  .testimonials-block {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .testimonials-block .inner-block {
-    margin: 30px;
-    width: -webkit-fit-content !important;
-    width: -moz-fit-content !important;
-    width: fit-content !important;
-  }
-  .testimonials-block .inner-block p {
-    width: 650px;
   }
   .projects-img img {
     width: 250px;
