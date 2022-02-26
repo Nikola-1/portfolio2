@@ -3,6 +3,7 @@ $tamnoplava:#064472;
 $svetloplava:#1D80DB;
 $ledenoplava:#A8CEFF;
 $headertekst:#fff;
+$ivica:3px;
 *{
     padding: 0;
     margin: 0;
@@ -23,10 +24,10 @@ $headertekst:#fff;
 @mixin project-blok{
     text-align: center;
         border-radius: 10px;
-        box-shadow: 3px 3px 3px #ddd;
+        box-shadow:0 3px 3px 3px #ddd;
 }
 @mixin projects-img{
-    
+    border-bottom: 1px solid #ddd;
         border-radius: 10px 10px 0 0;
 }
 @mixin description-text{
@@ -52,7 +53,8 @@ $headertekst:#fff;
     border: none;
 
 }
-
+@mixin card-width($sirina:null){
+}
     
 
     p,a{
@@ -158,6 +160,7 @@ nav{
     background-color: $svetloplava;
     cursor: pointer;
     color: #fff;
+    position: relative;
 }
 
 .action_button{
@@ -165,6 +168,10 @@ nav{
     text-align: center;
     .contact_button,.cv_button{
         @include btn;
+        --border-size:2px;
+        &:active{
+            background: #1e6db8;
+        }
         a{
             text-decoration: none;
             color: #fff;
@@ -216,6 +223,10 @@ nav{
     margin:10px 0 20px 0 ;
     color: $svetloplava;
     padding: 20px 0 0 0;
+}
+.service-text{
+    display: flex;
+    flex-direction: column;
 }
 .service p{
     width: 50px/2 * 10;
@@ -287,13 +298,6 @@ nav{
         border-radius: 50%;
         box-shadow: 14px -12px 0 4px $svetloplava;
     }
-    .front-layer{
-        width: 100%;
-        height: 10em;
-        background: linear-gradient(1deg,white 40%,transparent);
-        position: relative;
-        margin-top: -140px;
-    }
 }
 #text-about-me{
     display: block;
@@ -303,19 +307,21 @@ nav{
     flex-direction: row;
     h3{
         color: $svetloplava;
+        margin-right: 20px;
     }
+    .paragraph{
+
+    width: 250px;
+    text-align: center;
+    margin-left: auto;
 p{
     color: #000;
     text-align: start;
 }
+    }
+}
 }
 
-}
-.under-button{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   }
 
 .skills-header h2{
     text-align: center;
@@ -335,7 +341,6 @@ p{
     
     .skill{
         @include box;
-        margin: 3%;
         h3{
             padding: 2em;
             text-align: center;
@@ -344,29 +349,53 @@ p{
             color: #A8CEFF;
         }
         p{
-            width: 50%;
-            margin: 30px auto ;
+            padding: 2em;
         }
     }
 }
 
 .projects{
+    
     h2{
         text-align: center;
         margin-top: 20px;
         
         color: #1D80DB;
     }
-    
+    .projects-wrapper{
+    .project-blok{
+        &:hover{
+            transform:scale(110%);
+            transition: .2s;
+        }
     .btn{
         @include btn;
         text-align: center;
         margin:auto;
         color: #fff;
-        margin: 30px auto;
+        margin: 30px auto; 
+        background-color: 3px solid transparent;
+        &:hover{
+            background-color: #fff;
+            border: 3px solid $svetloplava;
+            transition: .3s;
+            color: $svetloplava;
+        }
+        p i{
+            margin-left: 10px;
+            
+        }
+        &:hover i{
+            
+            padding-left: 12px;
+            transition: .3s;
+        }
+    }
+        
     }
 }
-    
+    }
+
 .project-header3{
     text-align: center;
     margin-top: 20px;
@@ -425,6 +454,10 @@ hr{
         text-align: center;
     }
     .testimonials-block{
+        &:hover{
+            transform:scale(110%);
+            transition: .2s;
+        }
         .testimonials-bottom-border{
             border-bottom: 1px solid #ddd;
         }
@@ -447,6 +480,7 @@ hr{
         }
         .client-quote{
             padding: 20px;
+            min-height: 110px;
             p{
                 z-index: 6;
                 position: relative;
@@ -470,59 +504,6 @@ hr{
         }
     }
 }
-/*.contact{
-    .contact-wrapper{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-        margin: auto;
-        background-color: $svetloplava;
-        box-shadow: 0 4px 4px 4px #ddd;
-    }
-    .contact-me-section{
-        background-color: #fff;
-        padding: 30px;
-        img{
-            width:300px ;
-            height: 300px;
-            margin-top: 100px;
-        }
-    }
-    .input-section{
-        background-color: $svetloplava;
-        width: 200px;
-        height: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        input{
-            outline: none;
-            border: none;
-            width: 300px;
-            height: 50px;
-            margin: 30px;
-            border-radius: 20px;
-            &::placeholder{
-                padding-left: 10px;
-            }
-        }
-        textarea{
-            width: 300px;
-            height: 150px;
-            margin: 30px;
-            box-shadow: inset 0 4px 4px 4px #ddd;
-            resize: none;
-            border-radius: 20px;
-            &::placeholder{
-                padding-left:10px;
-            }    
-        }
-        
-    }
-}
-*/
 .contact{
     position: relative;
     width: 100%;
@@ -552,11 +533,12 @@ hr{
         h2{
             position: relative;
             text-align: center;
+            padding-top: 10px;
         }
     }
     .input-block{
         padding: 25px 40px;
-    }
+    
     .field{
         width: 100%;
 	border: 2px solid rgba(0, 0, 0, 0);
@@ -565,13 +547,29 @@ hr{
 	padding: 0.5rem 1rem;
 	font-size: 1.1rem;
 	margin-bottom: 22px;
-	transition: .3s;
+	transition: .2s;
+    border: 3px solid transparent;
+    &:focus{
+        border: 3px solid #1D80DB;
+        
+    }
     }
     textarea{
         min-height: 150px;
         resize: none;
     }
-    .btn{
+    .btns{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        i{
+            font-size: 30px;
+            color: $svetloplava;
+            cursor: pointer;
+            
+        }
+        
+    .btn-contact{
         width: fit-content;
         padding: 0.5rem 1rem;
         outline: none;
@@ -581,9 +579,27 @@ hr{
         font-size: 15px;
         float: right;
         margin: 10px;
+        border: 3px solid $svetloplava;
+        cursor: pointer;
         i{
-            margin-left: 5px;
+            color: #fff;
+        }
+        &:hover  {
+            border: 3px solid $svetloplava;
+            background-color: #fff;
+            color: #1D80DB ;
+            transition: .3s;
+            i{
+                color: $svetloplava;
+            }
+        }
+        i{
+            margin-left: 10px;
+            font-size: 15px;
+            
         }
     }
+}
+}
 }
 

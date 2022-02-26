@@ -140,6 +140,12 @@ nav {
   background-color: #1D80DB;
   cursor: pointer;
   color: #fff;
+  position: relative;
+  --border-size:2px;
+}
+
+.action_button .contact_button:active, .action_button .cv_button:active {
+  background: #1e6db8;
 }
 
 .action_button .contact_button a, .action_button .cv_button a {
@@ -198,6 +204,16 @@ nav {
   margin: 10px 0 20px 0;
   color: #1D80DB;
   padding: 20px 0 0 0;
+}
+
+.service-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .service p {
@@ -282,14 +298,6 @@ nav {
           box-shadow: 14px -12px 0 4px #1D80DB;
 }
 
-#me .front-layer {
-  width: 100%;
-  height: 10em;
-  background: linear-gradient(1deg, white 40%, transparent);
-  position: relative;
-  margin-top: -140px;
-}
-
 #text-about-me {
   display: block;
 }
@@ -307,24 +315,18 @@ nav {
 
 #text-about-me .line1 h3 {
   color: #1D80DB;
+  margin-right: 20px;
 }
 
-#text-about-me .line1 p {
+#text-about-me .line1 .paragraph {
+  width: 250px;
+  text-align: center;
+  margin-left: auto;
+}
+
+#text-about-me .line1 .paragraph p {
   color: #000;
   text-align: start;
-}
-
-.under-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .skills-header h2 {
@@ -367,7 +369,6 @@ nav {
   margin: 1%;
   text-align: center;
   margin-bottom: 50px;
-  margin: 3%;
 }
 
 .skills-content .skill h3 {
@@ -379,8 +380,7 @@ nav {
 }
 
 .skills-content .skill p {
-  width: 50%;
-  margin: 30px auto;
+  padding: 2em;
 }
 
 .projects h2 {
@@ -389,7 +389,14 @@ nav {
   color: #1D80DB;
 }
 
-.projects .btn {
+.projects .projects-wrapper .project-blok:hover {
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.projects .projects-wrapper .project-blok .btn {
   padding: 10px 10px;
   text-align: center;
   margin: 1em;
@@ -397,10 +404,30 @@ nav {
   background-color: #1D80DB;
   cursor: pointer;
   color: #fff;
+  position: relative;
   text-align: center;
   margin: auto;
   color: #fff;
   margin: 30px auto;
+  background-color: 3px solid transparent;
+}
+
+.projects .projects-wrapper .project-blok .btn:hover {
+  background-color: #fff;
+  border: 3px solid #1D80DB;
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: #1D80DB;
+}
+
+.projects .projects-wrapper .project-blok .btn p i {
+  margin-left: 10px;
+}
+
+.projects .projects-wrapper .project-blok .btn:hover i {
+  padding-left: 12px;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .project-header3 {
@@ -423,11 +450,12 @@ nav {
 .projects-wrapper .project-blok {
   text-align: center;
   border-radius: 10px;
-  -webkit-box-shadow: 3px 3px 3px #ddd;
-          box-shadow: 3px 3px 3px #ddd;
+  -webkit-box-shadow: 0 3px 3px 3px #ddd;
+          box-shadow: 0 3px 3px 3px #ddd;
 }
 
 .projects-wrapper .project-blok .projects-img img {
+  border-bottom: 1px solid #ddd;
   border-radius: 10px 10px 0 0;
 }
 
@@ -452,6 +480,7 @@ nav {
   background-color: #1D80DB;
   cursor: pointer;
   color: #fff;
+  position: relative;
   margin: 1em auto;
 }
 
@@ -507,6 +536,13 @@ hr {
   border-radius: 10px;
 }
 
+.testimonials .testimonials-block:hover {
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
 .testimonials .testimonials-block .testimonials-bottom-border {
   border-bottom: 1px solid #ddd;
 }
@@ -526,6 +562,7 @@ hr {
 
 .testimonials .testimonials-block .client-quote {
   padding: 20px;
+  min-height: 110px;
 }
 
 .testimonials .testimonials-block .client-quote p {
@@ -552,59 +589,6 @@ hr {
   font-size: 26px;
 }
 
-/*.contact{
-    .contact-wrapper{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-        margin: auto;
-        background-color: $svetloplava;
-        box-shadow: 0 4px 4px 4px #ddd;
-    }
-    .contact-me-section{
-        background-color: #fff;
-        padding: 30px;
-        img{
-            width:300px ;
-            height: 300px;
-            margin-top: 100px;
-        }
-    }
-    .input-section{
-        background-color: $svetloplava;
-        width: 200px;
-        height: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        input{
-            outline: none;
-            border: none;
-            width: 300px;
-            height: 50px;
-            margin: 30px;
-            border-radius: 20px;
-            &::placeholder{
-                padding-left: 10px;
-            }
-        }
-        textarea{
-            width: 300px;
-            height: 150px;
-            margin: 30px;
-            box-shadow: inset 0 4px 4px 4px #ddd;
-            resize: none;
-            border-radius: 20px;
-            &::placeholder{
-                padding-left:10px;
-            }    
-        }
-        
-    }
-}
-*/
 .contact {
   position: relative;
   width: 100%;
@@ -653,13 +637,14 @@ hr {
 .contact-wrapper .contact-me-block h2 {
   position: relative;
   text-align: center;
+  padding-top: 10px;
 }
 
 .contact-wrapper .input-block {
   padding: 25px 40px;
 }
 
-.contact-wrapper .field {
+.contact-wrapper .input-block .field {
   width: 100%;
   border: 2px solid rgba(0, 0, 0, 0);
   outline: none;
@@ -667,16 +652,38 @@ hr {
   padding: 0.5rem 1rem;
   font-size: 1.1rem;
   margin-bottom: 22px;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: .2s;
+  transition: .2s;
+  border: 3px solid transparent;
 }
 
-.contact-wrapper textarea {
+.contact-wrapper .input-block .field:focus {
+  border: 3px solid #1D80DB;
+}
+
+.contact-wrapper .input-block textarea {
   min-height: 150px;
   resize: none;
 }
 
-.contact-wrapper .btn {
+.contact-wrapper .input-block .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-wrapper .input-block .btns i {
+  font-size: 30px;
+  color: #1D80DB;
+  cursor: pointer;
+}
+
+.contact-wrapper .input-block .btns .btn-contact {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -688,9 +695,28 @@ hr {
   font-size: 15px;
   float: right;
   margin: 10px;
+  border: 3px solid #1D80DB;
+  cursor: pointer;
 }
 
-.contact-wrapper .btn i {
-  margin-left: 5px;
+.contact-wrapper .input-block .btns .btn-contact i {
+  color: #fff;
+}
+
+.contact-wrapper .input-block .btns .btn-contact:hover {
+  border: 3px solid #1D80DB;
+  background-color: #fff;
+  color: #1D80DB;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.contact-wrapper .input-block .btns .btn-contact:hover i {
+  color: #1D80DB;
+}
+
+.contact-wrapper .input-block .btns .btn-contact i {
+  margin-left: 10px;
+  font-size: 15px;
 }
 /*# sourceMappingURL=style.css.map */

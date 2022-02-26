@@ -114,6 +114,12 @@ width: 100%;
 .testimonials-wrapper{
   flex-direction: column;
 }
+.contact-me-block{
+  img{
+    width: 200px !important;
+    height: 200px !important;
+  }
+}
 }
 
 
@@ -175,10 +181,9 @@ width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content:space-around;
+    gap: 1%;
   }
-  .service{
-    width: 40%;
-  }
+  
 
 .skill{
   width: 40%!important;
@@ -203,6 +208,9 @@ width: 100%;
       width: 250px ;
       height: 150px ;
     }
+  }
+  .service{
+    width: 40%;
   }
 }
 @media(max-width:911px){
@@ -229,6 +237,9 @@ width: 100%;
     gap:2%;
     justify-content: space-around;
   }
+  .service{
+    width: 45%;
+  }
 }
 @media(max-width:1023px){
   .project-blok{
@@ -246,6 +257,7 @@ width: 100%;
       display: flex;
     }
   }
+  
 }
 @media (min-width:1024px){
   #lap-top{
@@ -254,9 +266,7 @@ width: 100%;
   .waves_blok{
     padding-top: 50px;
   }
-  .service{
-    width: 40%;
-  }
+  
   .services{
     display: flex;
     flex-wrap: wrap;
@@ -265,7 +275,6 @@ width: 100%;
   }
   .skill{
     width: 40%!important;
-  
   }
 
   .projects-img{
@@ -302,7 +311,7 @@ width: 100%;
     align-items: stretch;
   }
   .skill{
-    width: 15%!important;
+    width: 20% !important;
   
   }
   .inner-block{
