@@ -1,14 +1,32 @@
-@import url(responsive.scss);
+@import url(style.scss);
 $tamnoplava:#064472;
 $svetloplava:#1D80DB;
 $ledenoplava:#A8CEFF;
 $headertekst:#fff;
+@mixin box($sirina){
+  display: block;
+  box-shadow: 0 4px 4px 4px #ddd;
+  border-radius: 10px;
+  width: $sirina;
+  margin:1%;
+  text-align: center;
+  margin-bottom: 50px;
+  @if $sirina 20%{
+    .service-text p{
+      padding: 20px;
+    }
+  }
+  
+}
 @media (max-width:425px){
   p{
     font-size: 12px;
   }
   h1,h2,h3{
     font-size: 14px;
+  }
+  .paragraph{
+    width: 200px !important;
   }
 }
 @media (max-width: 600px) {
@@ -62,7 +80,7 @@ $headertekst:#fff;
     
 }
 .service{
-  width: 60%;
+  @include box(60%);
   p{
     width: fit-content;
   }
@@ -84,7 +102,11 @@ width: 100%;
   .line1{
     margin: 20px auto;
     line-height: 20px;
+    .paragraph{
+      width: 250px;
+    }
   }
+
 }
 }
 .skill{
@@ -165,6 +187,9 @@ width: 100%;
   .about-me-blok{
     flex-direction: column-reverse;
   } 
+  .contact{
+    padding: 0px;
+  }
 }
 
 

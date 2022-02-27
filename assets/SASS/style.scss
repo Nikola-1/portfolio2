@@ -3,17 +3,11 @@ $tamnoplava:#064472;
 $svetloplava:#1D80DB;
 $ledenoplava:#A8CEFF;
 $headertekst:#fff;
-$ivica:3px;
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-@mixin project-h2{
-    text-align: center;
-        margin-top: 20px;
-         
-        color: #1D80DB;
 }
 @mixin project-wrapper{
     display: flex;
@@ -44,16 +38,17 @@ $ivica:3px;
     width: 40px;
     height: 40px;
 }
-@mixin hr{
+@mixin marker($tekst){
+    color:$tekst;
+}
+@mixin hr($sirina){
     margin: auto;
-    width: 120px;
+    width: $sirina;
     height: 5px;
     background-color: $svetloplava;
     outline: none;
     border: none;
 
-}
-@mixin card-width($sirina:null){
 }
     .cleaner{
         clear: both;
@@ -154,25 +149,23 @@ nav{
 .blok1 h1{
     color: #000;
 }
-@mixin btn{
+@mixin btn($background){
     padding:10px 10px;
     text-align: center;
     margin:1em ;
     width: 150px;
-    background-color: $svetloplava;
+    background-color: $background;
     cursor: pointer;
     color: #fff;
     position: relative;
 }
-
 .action_button{
     display: flex;
     text-align: center;
     .contact_button,.cv_button{
-        @include btn;
-        --border-size:2px;
+        @include btn($svetloplava);
         &:active{
-            background: #1e6db8;
+            @include btn(#2769a7)
         }
         a{
             text-decoration: none;
@@ -208,16 +201,18 @@ nav{
     height: 100px;
     }
 }
-@mixin box{
+@mixin box($sirina){
     display: block;
     box-shadow: 0 4px 4px 4px #ddd;
     border-radius: 10px;
-    width: 20%;
+    width: $sirina;
     margin:1%;
     text-align: center;
-    margin-bottom: 50px;}
+    margin-bottom: 50px;
+    
+}
 .service{
-    @include box;
+    @include box(20%);
 }
 
 .service h3{
@@ -229,6 +224,11 @@ nav{
 .service-text{
     display: flex;
     flex-direction: column;
+    p{
+        span{
+            @include marker($tamnoplava);
+        }
+}
 }
 .service p{
     width: 50px/2 * 10;
@@ -313,7 +313,7 @@ nav{
     }
     .paragraph{
 
-        width: 200px;
+        width: 250px;
     text-align: center;
     margin-left: auto;
 p{
@@ -342,7 +342,7 @@ p{
     flex-wrap: wrap;
     
     .skill{
-        @include box;
+        @include box(20%);
         h3{
             padding: 2em;
             text-align: center;
@@ -371,7 +371,7 @@ p{
             transition: .2s;
         }
     .btn{
-        @include btn;
+        @include btn(#1D80DB);
         text-align: center;
         margin:auto;
         color: #fff;
@@ -418,7 +418,7 @@ p{
             }
             
             .btn{
-                @include btn;
+                @include btn(#1D80DB);
                 margin: 1em auto ;
                 
             }
@@ -432,14 +432,14 @@ p{
             margin: auto;
             display: flex;
             img{
-            @include description-img();
+            @include description-img;
             margin: 10px;
             }
         }
     }
 
 hr{
-    @include hr;
+    @include hr(120px);
 }
 .testimonials{
     .testimonials-wrapper{
@@ -605,4 +605,18 @@ hr{
 }
 }
 }
-
+footer{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    vertical-align: middle;
+    background-color: $svetloplava;
+    color: #fff;
+    a{
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+}

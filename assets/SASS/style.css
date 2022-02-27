@@ -146,11 +146,17 @@ nav {
   cursor: pointer;
   color: #fff;
   position: relative;
-  --border-size:2px;
 }
 
 .action_button .contact_button:active, .action_button .cv_button:active {
-  background: #1e6db8;
+  padding: 10px 10px;
+  text-align: center;
+  margin: 1em;
+  width: 150px;
+  background-color: #2769a7;
+  cursor: pointer;
+  color: #fff;
+  position: relative;
 }
 
 .action_button .contact_button a, .action_button .cv_button a {
@@ -219,6 +225,10 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.service-text p span {
+  color: #064472;
 }
 
 .service p {
@@ -324,7 +334,7 @@ nav {
 }
 
 #text-about-me .line1 .paragraph {
-  width: 200px;
+  width: 250px;
   text-align: center;
   margin-left: auto;
 }
@@ -724,5 +734,27 @@ hr {
 .contact-wrapper .input-block .btns .btn-contact i {
   margin-left: 10px;
   font-size: 15px;
+}
+
+footer {
+  height: 50px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  vertical-align: middle;
+  background-color: #1D80DB;
+  color: #fff;
+}
+
+footer a {
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

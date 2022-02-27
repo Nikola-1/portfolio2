@@ -1,10 +1,13 @@
-@import url(responsive.scss);
+@import url(style.scss);
 @media (max-width: 425px) {
   p {
     font-size: 12px;
   }
   h1, h2, h3 {
     font-size: 14px;
+  }
+  .paragraph {
+    width: 200px !important;
   }
 }
 
@@ -63,7 +66,17 @@
     padding-top: 150px;
   }
   .service {
+    display: block;
+    -webkit-box-shadow: 0 4px 4px 4px #ddd;
+            box-shadow: 0 4px 4px 4px #ddd;
+    border-radius: 10px;
     width: 60%;
+    margin: 1%;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .service .service-text p {
+    padding: 20px;
   }
   .service p {
     width: -webkit-fit-content;
@@ -93,6 +106,9 @@
   .about-me #text-about-me .line1 {
     margin: 20px auto;
     line-height: 20px;
+  }
+  .about-me #text-about-me .line1 .paragraph {
+    width: 250px;
   }
   .skill {
     width: 70% !important;
@@ -167,6 +183,9 @@
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+  .contact {
+    padding: 0px;
   }
 }
 
