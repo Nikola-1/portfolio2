@@ -1,5 +1,13 @@
 @import url(responsive.scss);
-
+$tamnoplava:#064472;
+$svetloplava:#1D80DB;
+$ledenoplava:#A8CEFF;
+$headertekst:#fff;
+@media (max-width:425px){
+  *{
+    font-size: 12px;
+  }
+}
 @media (max-width: 600px) {
   .services {
     text-align: center;
@@ -15,8 +23,9 @@
     height: (60px/2) *20;
   }
   .header_text {
-    width: 300px;
-
+    height: 40%;
+    justify-content: start;
+    
   }
   .header_text h1 {
     font-size: 30px;
@@ -26,33 +35,15 @@
   }
   .action_button  {
     box-sizing: border-box;
-    
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   
   
   .wave_two {
     margin-top: 26px;
-  }
-  .btn-menu{
-    display: block;
-    height: 50px;
-    float: right;
-    margin-top: 10px;
-  }
-  .line {
-    background-color: #fff;
-    width: 35px;
-    height: 3px;
-    margin: 10px;
-  }
-  .navigacija ul li a {
-    display: none;
-  }
-  .btn:after .navigacija ul li a {
-    content: '';
-    display: block;
   }
   #lap-top{
     margin-top: -13em;
@@ -120,6 +111,13 @@ width: 100%;
     height: 200px !important;
   }
 }
+.navigacija ul{
+  display: block;
+  text-align: center;
+}
+.navigacija ul li{
+  border-bottom: 1px solid white;
+}
 }
 
 
@@ -164,9 +162,7 @@ width: 100%;
   .about-me-blok{
     flex-direction: column-reverse;
   } 
-  
 }
-
 
 
 
@@ -323,9 +319,9 @@ width: 100%;
     margin-top: -22em;
   }
   .service{
-    width: 17%;
+    width: 22%;
     p{
-      width: 50%;
+      width: 60%;
     }
   }
   .projects-img{

@@ -55,7 +55,9 @@ $ivica:3px;
 }
 @mixin card-width($sirina:null){
 }
-    
+    .cleaner{
+        clear: both;
+    }
 
     p,a{
     font-family: 'Open Sans', sans-serif;
@@ -68,6 +70,7 @@ $ivica:3px;
     width: 100%;
     background-color:$tamnoplava;
     position: relative;
+    overflow: visible;
     ul{
         padding: 20px;
     }
@@ -75,6 +78,7 @@ $ivica:3px;
         float: left;
         display: inline-flex;
         justify-content: center;
+        position: absolute;
         margin: 20px;
         img{
             width: 50px;
@@ -91,7 +95,7 @@ $ivica:3px;
     color: #1D80DB;
 }
 nav{
-    text-align: center;
+    text-align: end;
 }
 .navigacija ul{
     margin-right: 20px;
@@ -101,7 +105,7 @@ nav{
     
 }
 .navigacija ul li{
-    margin: 10px;
+    padding: 10px;
 }
 .navigacija ul li a{
     color: #fff;
@@ -110,9 +114,7 @@ nav{
 }
 .header_text{
     position: relative;
-   
    height: 90%;
-   margin: 30px auto;
    justify-content: center;
    flex-direction: column;
    text-align: center;
@@ -302,16 +304,16 @@ nav{
 #text-about-me{
     display: block;
     .line1{
-    display: flex;
-    margin: 35px auto;
-    flex-direction: row;
+        display: flex;
+        margin: 35px auto;
+        flex-direction: row;
     h3{
         color: $svetloplava;
         margin-right: 20px;
     }
     .paragraph{
 
-    width: 250px;
+        width: 200px;
     text-align: center;
     margin-left: auto;
 p{

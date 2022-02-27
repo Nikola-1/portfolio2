@@ -1,4 +1,10 @@
 @import url(responsive.scss);
+@media (max-width: 425px) {
+  * {
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 600px) {
   .services {
     text-align: center;
@@ -14,7 +20,10 @@
     height: 600px;
   }
   .header_text {
-    width: 300px;
+    height: 40%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
   .header_text h1 {
     font-size: 30px;
@@ -25,28 +34,19 @@
   .action_button {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .wave_two {
     margin-top: 26px;
-  }
-  .btn-menu {
-    display: block;
-    height: 50px;
-    float: right;
-    margin-top: 10px;
-  }
-  .line {
-    background-color: #fff;
-    width: 35px;
-    height: 3px;
-    margin: 10px;
-  }
-  .navigacija ul li a {
-    display: none;
-  }
-  .btn:after .navigacija ul li a {
-    content: '';
-    display: block;
   }
   #lap-top {
     margin-top: -13em;
@@ -116,6 +116,13 @@
   .contact-me-block img {
     width: 200px !important;
     height: 200px !important;
+  }
+  .navigacija ul {
+    display: block;
+    text-align: center;
+  }
+  .navigacija ul li {
+    border-bottom: 1px solid white;
   }
 }
 
@@ -321,10 +328,10 @@
     margin-top: -22em;
   }
   .service {
-    width: 17%;
+    width: 22%;
   }
   .service p {
-    width: 50%;
+    width: 60%;
   }
   .projects-img img {
     width: 350px;
