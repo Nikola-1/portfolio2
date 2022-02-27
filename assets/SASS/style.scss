@@ -376,7 +376,8 @@ p{
         margin:auto;
         color: #fff;
         margin: 30px auto; 
-        background-color: 3px solid transparent;
+        background-color: $svetloplava;
+        border: 3px solid transparent;
         &:hover{
             background-color: #fff;
             border: 3px solid $svetloplava;

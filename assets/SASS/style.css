@@ -414,7 +414,8 @@ nav {
   margin: auto;
   color: #fff;
   margin: 30px auto;
-  background-color: 3px solid transparent;
+  background-color: #1D80DB;
+  border: 3px solid transparent;
 }
 
 .projects .projects-wrapper .project-blok .btn:hover {
