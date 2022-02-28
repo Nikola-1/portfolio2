@@ -77,6 +77,12 @@ nav {
   text-transform: uppercase;
 }
 
+.navigacija ul li a:hover {
+  color: #A8CEFF;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
 .header_text {
   position: relative;
   height: 90%;

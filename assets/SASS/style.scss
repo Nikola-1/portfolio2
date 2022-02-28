@@ -106,6 +106,10 @@ nav{
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+    &:hover{
+        color: $ledenoplava;
+        transition: .3s;
+    }
 }
 .header_text{
     position: relative;
