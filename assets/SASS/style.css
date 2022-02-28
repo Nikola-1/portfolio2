@@ -737,7 +737,9 @@ hr {
 }
 
 footer {
-  height: 50px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -750,6 +752,7 @@ footer {
   vertical-align: middle;
   background-color: #1D80DB;
   color: #fff;
+  margin-top: 10px;
 }
 
 footer a {

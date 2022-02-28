@@ -143,6 +143,10 @@ width: 100%;
 .navigacija ul li{
   border-bottom: 1px solid white;
 }
+footer {
+  flex-direction: column;
+  height: fit-content;
+}
 }
 
 
