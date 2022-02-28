@@ -6,6 +6,11 @@
           box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .cleaner {
   clear: both;
 }
@@ -449,7 +454,12 @@ nav {
   color: #1D80DB;
 }
 
-.projects .projects-wrapper .project-blok .btn p i {
+.projects .projects-wrapper .project-blok .btn:hover a {
+  color: #1D80DB;
+  text-decoration: none;
+}
+
+.projects .projects-wrapper .project-blok .btn a i {
   margin-left: 10px;
 }
 

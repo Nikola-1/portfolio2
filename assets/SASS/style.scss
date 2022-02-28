@@ -9,6 +9,10 @@ $headertekst:#fff;
     margin: 0;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+    color: #fff;
+}
 @mixin project-wrapper{
     display: flex;
         justify-content: space-around;
@@ -386,18 +390,22 @@ p{
         margin: 30px auto; 
         background-color: $svetloplava;
         border: 3px solid transparent;
-        &:hover{
+        &:hover {
             background-color: #fff;
             border: 3px solid $svetloplava;
             transition: .3s;
             color: $svetloplava;
+            a{
+                color: $svetloplava;
+                text-decoration: none;
+            }
         }
-        p i{
+        a i{
             margin-left: 10px;
+            
             
         }
         &:hover i{
-            
             padding-left: 12px;
             transition: .3s;
         }
@@ -428,7 +436,6 @@ p{
             .btn{
                 @include btn(#1D80DB);
                 margin: 1em auto ;
-                
             }
         }
         

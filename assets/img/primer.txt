@@ -1,0 +1,101 @@
+1. Spojice se tabela t2 sa t1 tako da budu prikazane sve vrednosti iz tabele t2.
+
+1	a	1	x
+3	c	3	y
+NULL	NULL	5	z
+
+2.
+UNIQUE 		Nam kaze da su vrednosti tog atributa jedinstveni za svaku n-torku
+			jmbg int UNIQUE
+
+CHECK 		Sluzi radi provere da li vrednosti koje se unose zadovoljavaju 				neki uslov koji smo postavili
+
+FOREIGN KEY	Sluzi kako bi u tabelu dodali atribut koji ce imati vrednosti 	               		nekog atributa druge tabele. Najcesce sluzi radi spajanja tabela
+
+
+CREATE TABLE pom(
+	pom_id int PRIMARY KEY,
+	JMBG int UNIQUE,
+	ocena int NOT NULL CHECK(ocena BETWEEN 5 AND 10),
+	proj_id int,
+	FOREIGN KEY(proj_id) REFERENCES projekat(ProjekatID)
+)
+CREATE TABLE pom(
+	pom_id int PRIMARY KEY,
+	JMBG int UNIQUE,
+	ocena int CHECK(ocena BETWEEN 5 AND 10),
+	proj_id int FOREIGN KEY REFERENCES projekat(ProjekatID)
+)
+
+3.
+-Ne koristi uslov spajanja (NATURAL JOIN, CROSS JOIN)
+-N-torke sadrze vrednost spoljnog kljuca koja ne postoji kao primarni kljuc u primarnoj relaciji (Referencijalni integritet)
+-Ni jedan atribut koji je primarni kljuc, ili je deo primarnog kljuca, ne sme nikada poprimiti NULL (Integritet entiteta)
+-Zabrana promene primarnog kljuca (Integritet entiteta, Referencijalni integritet)
+
+4.
+Naruseno je pravilo referencijalnog integriteta zbog Lolic koji ima od_id=34
+
+5.
+
+CREATE TABLE Kupci(
+	k_id int PRIMARY KEY,
+	adresa varchar(30),
+	grad varchar(30),
+	drzava varchar(30) NOT NULL
+)
+
+//Ovako dobijamo parove kupaca koji su iz iste drzave 
+
+SELECT k1.k_id, k1.drzava, k2.k_id, k2.drzava
+FROM Kupci k1, Kupci k2
+WHERE k1.k_id < k2.k_id AND k1.drzava = k2.drzava;
+
+
+
+Zadaci :
+
+
+Studenti (br_ind, ime, prezime, god_rodj, mesto_rodj)
+Predmeti (id_predmeta, sifra, naziv, krediti)
+Profesori (id_prof, ime, id_predmeta, odsek_ime, plata)
+Ispiti (br_ind, id_predmeta, god_roka, sifra_roka, ocena, datum_ispita)
+Ispitni_rokovi (god_roka, sifra_roka, naziv)
+
+
+1.
+SELECT id_prof,ime,naziv
+FROM Profesori p LEFT OUTER JOIN Predmeti pr
+ON p.id_predmeta=pr.id_predmeta
+
+2.
+SELECT s.br_ind,ime,prezime
+FROM Studenti s,Ispiti i,Predmeti p
+WHERE s.br_ind=i.br_ind AND i.id_predmeta=p.id_predmeta AND p.krediti=5;
+
+3.
+SELECT id_predmeta
+FROM Predmeti
+WHERE id_predmeta IN (SELECT id_predmeta
+			FROM Ispiti
+			WHERE (god_roka=2011 AND sifra_roka='januar') AND (god_roka=2018 AND sifra_roka='februar')
+
+4.
+SELECT s.br_ind,ime,prezime,SUM(krediti)
+FROM Studenti s ,Ispiti i ,Predmeti p
+WHERE s.br_ind=i.br_ind AND i.id_predmeta=p.id_predmeta AND ocena >5
+GROUP BY s.br_ind,ime,prezime
+HAVING SUM(krediti)>20
+
+
+5. 
+UPDATE Profesori
+SET plata=plata*1.5
+WHERE plata < (SELECT AVG(plata)
+		FROM Profesori);
+
+
+
+
+
+
