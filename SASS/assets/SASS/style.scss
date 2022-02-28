@@ -1,0 +1,631 @@
+@import url(responsive.scss);
+$tamnoplava:#064472;
+$svetloplava:#1D80DB;
+$ledenoplava:#A8CEFF;
+$headertekst:#fff;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@mixin project-wrapper{
+    display: flex;
+        justify-content: space-around;
+        margin-top: 2em;
+        align-items: center;
+}
+@mixin project-blok{
+    text-align: center;
+        border-radius: 10px;
+        box-shadow:0 3px 3px 3px #ddd;
+}
+@mixin projects-img{
+    border-bottom: 1px solid #ddd;
+        border-radius: 10px 10px 0 0;
+}
+@mixin description-text{
+        color:#fff;
+            font-weight: bold;
+            margin-top: 10px;
+            width: fit-content;
+            background-color: $ledenoplava;
+            margin: 10px auto;
+            border-radius: 10px;
+            padding: 3px;
+}
+@mixin description-img{
+    width: 40px;
+    height: 40px;
+}
+@mixin marker($tekst){
+    color:$tekst;
+}
+@mixin hr($sirina){
+    margin: auto;
+    width: $sirina;
+    height: 5px;
+    background-color: $svetloplava;
+    outline: none;
+    border: none;
+
+}
+    .cleaner{
+        clear: both;
+    }
+
+    p,a{
+    font-family: 'Open Sans', sans-serif;
+}
+    h1,h2,h3{
+    font-family: 'Montserrat', sans-serif;
+}
+    header{
+    height: 40vh;
+    width: 100%;
+    background-color:$tamnoplava;
+    position: relative;
+    overflow: visible;
+    ul{
+        padding: 20px;
+    }
+    .logo{
+        float: left;
+        display: inline-flex;
+        justify-content: center;
+        position: absolute;
+        margin: 20px;
+        img{
+            width: 50px;
+            height: 30px;
+        }
+    }
+}
+
+
+.first_letter{
+    color: #fff;
+}
+.second_letter{
+    color: #1D80DB;
+}
+nav{
+    text-align: end;
+}
+.navigacija ul{
+    margin-right: 20px;
+    display: inline-flex;
+    list-style: none;
+    
+    
+}
+.navigacija ul li{
+    padding: 10px;
+}
+.navigacija ul li a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover{
+        color: $ledenoplava;
+        transition: .3s;
+    }
+}
+.header_text{
+    position: relative;
+   height: 90%;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+   display: flex;
+   align-items: center;
+    h1{
+        
+        color: $ledenoplava;
+        font-size: 60px;
+        
+}
+    p{
+        color: #fff;
+    }  
+} 
+.waves_blok{
+    background-color: $tamnoplava;
+    margin-top: -2px;
+    .wave_one{
+        position: absolute;
+        margin-top: 40px;
+        z-index: 3;
+    }
+    .wave_two{
+        background-color: $tamnoplava;
+        z-index: 2;
+    }
+}
+
+
+
+.blok1 {
+    
+    position: relative;
+    margin-top: 10px;
+}
+.blok1 h1{
+    color: #000;
+}
+@mixin btn($background){
+    padding:10px 10px;
+    text-align: center;
+    margin:1em ;
+    width: 150px;
+    background-color: $background;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+}
+.action_button{
+    display: flex;
+    text-align: center;
+    .contact_button,.cv_button{
+        @include btn($svetloplava);
+        &:hover{
+            transform: scale(110%);
+            transition: .3s;
+        }
+        &:active{
+            @include btn(#2769a7)
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold; 
+        }
+    }
+    
+}
+#lap-top {
+    display: flex;
+    justify-content: center;
+    
+}
+.services-heading h2{
+    text-align: center;
+    color: $svetloplava;
+    padding-top: 3em;
+    
+}
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    margin-top: 5em;
+    width: 100%;
+    align-items: center;
+    
+}
+.img-effect {
+    img{
+    width: 100px;
+    height: 100px;
+    }
+}
+@mixin box($sirina){
+    display: block;
+    box-shadow: 0 4px 4px 4px #ddd;
+    border-radius: 10px;
+    width: $sirina;
+    margin:1%;
+    text-align: center;
+    margin-bottom: 50px;
+    
+}
+.service{
+    @include box(20%);
+}
+
+.service h3{
+     
+    margin:10px 0 20px 0 ;
+    color: $svetloplava;
+    padding: 20px 0 0 0;
+}
+.service-text{
+    display: flex;
+    flex-direction: column;
+    p{
+        span{
+            @include marker($tamnoplava);
+        }
+}
+}
+.service p{
+    width: 50px/2 * 10;
+    margin: auto;
+    padding-bottom: 10px;
+}
+.img-effect {
+    margin:30px auto;
+    margin-top: 0;
+    padding-top: 30px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+}
+.bg-color{
+    background-color: $svetloplava;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+}
+.about-me{
+    width: 75%;
+    background-color:#fff;
+    margin: auto;
+    border-top: 10px solid $svetloplava;
+    border-bottom: 10px solid $svetloplava;
+    box-shadow: 0 6px 6px 6px #ddd;
+    margin-bottom: 30px;
+    .about-me-heading h2{
+        text-align: center;
+        padding: 20px;
+         
+        color: $svetloplava;
+    }
+    .about-me-paragraph{
+        text-align: center;
+        margin-top: -15px;
+        color: #000;
+
+    }
+    .about-me-blok{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        gap: 20%;
+    }
+}
+
+
+#me {
+    
+    .border{
+        width: 250px;
+        height: 300px;
+        border: 10px solid $svetloplava;
+        position: absolute;
+        margin-top: 20px;
+        z-index: 2;
+    }
+    
+
+    
+    img{
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
+        border: 5px solid #fff;
+        border-radius: 50%;
+        box-shadow: 14px -12px 0 4px $svetloplava;
+    }
+}
+#text-about-me{
+    display: block;
+    .line1{
+        display: flex;
+        margin: 35px auto;
+        flex-direction: row;
+    h3{
+        color: $svetloplava;
+        margin-right: 20px;
+    }
+    .paragraph{
+
+        width: 250px;
+    text-align: center;
+    margin-left: auto;
+p{
+    color: #000;
+    text-align: start;
+}
+    }
+}
+}
+
+
+.skills-header h2{
+    text-align: center;
+    
+    color: $svetloplava;
+} 
+.skills{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.skills-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    .skill{
+        @include box(20%);
+        h3{
+            padding: 2em;
+            text-align: center;
+            background-color: $svetloplava;
+            border-radius: 10px 10px 0 0;
+            color: #A8CEFF;
+        }
+        p{
+            padding: 2em;
+        }
+    }
+}
+
+.projects{
+    
+    h2{
+        text-align: center;
+        margin-top: 20px;
+        
+        color: #1D80DB;
+    }
+    .projects-wrapper{
+    .project-blok{
+        &:hover{
+            transform:scale(110%);
+            transition: .2s;
+        }
+    .btn{
+        @include btn(#1D80DB);
+        text-align: center;
+        margin:auto;
+        color: #fff;
+        margin: 30px auto; 
+        background-color: $svetloplava;
+        border: 3px solid transparent;
+        &:hover{
+            background-color: #fff;
+            border: 3px solid $svetloplava;
+            transition: .3s;
+            color: $svetloplava;
+        }
+        p i{
+            margin-left: 10px;
+            
+        }
+        &:hover i{
+            
+            padding-left: 12px;
+            transition: .3s;
+        }
+    }
+        
+    }
+}
+    }
+
+.project-header3{
+    text-align: center;
+    margin-top: 20px;
+}
+    .projects-wrapper{
+        @include project-wrapper;
+        
+        .project-blok{
+            @include project-blok;
+            
+            .projects-img{
+                img{@include projects-img;}
+            }
+            .description-text{
+                @include description-text;
+                
+            }
+            
+            .btn{
+                @include btn(#1D80DB);
+                margin: 1em auto ;
+                
+            }
+        }
+        
+    }
+    .description-text1{
+        .description-img {
+            
+            width: fit-content;
+            margin: auto;
+            display: flex;
+            img{
+            @include description-img;
+            margin: 10px;
+            }
+        }
+    }
+
+hr{
+    @include hr(120px);
+}
+.testimonials{
+    .testimonials-wrapper{
+        display: flex;
+        margin-top: 30px;
+    }
+    h2{
+        color: $svetloplava;
+        text-align: center;
+        margin-top: 20px;
+        
+        
+    }
+    p{
+        text-align: center;
+    }
+    .testimonials-block{
+        &:hover{
+            transform:scale(110%);
+            transition: .2s;
+        }
+        .testimonials-bottom-border{
+            border-bottom: 1px solid #ddd;
+        }
+        width: 400px;
+        height: 300px;
+        display: block;
+        margin: 50px auto;
+        box-shadow: 0 4px 4px 4px #ddd;
+        border-radius: 10px;
+        
+        .client-profile{
+            text-align: center;
+            img{
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                margin: -45px auto 20px;
+                box-shadow:0 2px 2px 2px #ddd ;
+            }
+        }
+        .client-quote{
+            padding: 20px;
+            min-height: 110px;
+            p{
+                z-index: 6;
+                position: relative;
+            }
+            i{
+                font-size: 60px;
+                position: absolute;
+                margin-top: -20px;
+                z-index: 4;
+                color: $ledenoplava;
+            }
+        }
+    }
+    .client-name{
+        text-align: center;
+        font-family: 'Montserrat';
+        padding: 15px;
+        h3{
+            color: $svetloplava;
+            font-size: 26px;
+        }
+    }
+}
+.contact{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 100px;
+}
+.contact-wrapper{
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 4px 4px #ddd;
+    .contact-me-block{
+        background-color: $svetloplava;
+        height: 100%;
+        color: #fff;
+        img{
+            width: 300px;
+            height: 300px;
+            margin-top: 50px;
+        }
+        h2{
+            position: relative;
+            text-align: center;
+            padding-top: 10px;
+        }
+    }
+    .input-block{
+        padding: 25px 40px;
+    
+    .field{
+        width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .2s;
+    border: 3px solid transparent;
+    &:focus{
+        border: 3px solid #1D80DB;
+        
+    }
+    }
+    textarea{
+        min-height: 150px;
+        resize: none;
+    }
+    .btns{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        i{
+            font-size: 30px;
+            color: $svetloplava;
+            cursor: pointer;
+            
+        }
+        
+    .btn-contact{
+        width: fit-content;
+        padding: 0.5rem 1rem;
+        outline: none;
+        border: none;
+        background-color: $svetloplava;
+        color: #fff;
+        font-size: 15px;
+        float: right;
+        margin: 10px;
+        border: 3px solid $svetloplava;
+        cursor: pointer;
+        i{
+            color: #fff;
+        }
+        &:hover  {
+            border: 3px solid $svetloplava;
+            background-color: #fff;
+            color: #1D80DB ;
+            transition: .3s;
+            i{
+                color: $svetloplava;
+            }
+        }
+        i{
+            margin-left: 10px;
+            font-size: 15px;
+            
+        }
+    }
+}
+}
+}
+footer{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    vertical-align: middle;
+    background-color: $svetloplava;
+    color: #fff;
+    margin-top: 10px;
+    a{
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+}
