@@ -164,6 +164,10 @@ nav{
     text-align: center;
     .contact_button,.cv_button{
         @include btn($svetloplava);
+        &:hover{
+            transform: scale(110%);
+            transition: .3s;
+        }
         &:active{
             @include btn(#2769a7)
         }

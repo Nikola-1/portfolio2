@@ -148,6 +148,13 @@ nav {
   position: relative;
 }
 
+.action_button .contact_button:hover, .action_button .cv_button:hover {
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
 .action_button .contact_button:active, .action_button .cv_button:active {
   padding: 10px 10px;
   text-align: center;
