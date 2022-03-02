@@ -10,17 +10,10 @@ $headertekst:#fff;
   width: $sirina;
   margin:1%;
   text-align: center;
-  margin-bottom: 50px;
-  @if $sirina 20%{
-    .service-text p{
-      padding: 20px;
-    }
-  }
-  
 }
 @media (max-width:425px){
   p{
-    font-size: 12px;
+    font-size: 12px;;
   }
   h1,h2,h3{
     font-size: 14px;
