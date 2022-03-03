@@ -11,7 +11,7 @@ a {
   color: #fff;
 }
 
-.text, .description-text1 {
+.text, p, a, .service, .description-text1 {
   font-size: 18px;
 }
 
@@ -156,7 +156,7 @@ nav {
   padding: 10px 10px;
   text-align: center;
   margin: 1em;
-  width: 150px;
+  width: 160px;
   background-color: #1D80DB;
   cursor: pointer;
   color: #fff;
@@ -174,7 +174,7 @@ nav {
   padding: 10px 10px;
   text-align: center;
   margin: 1em;
-  width: 150px;
+  width: 160px;
   background-color: #2769a7;
   cursor: pointer;
   color: #fff;
@@ -437,7 +437,7 @@ nav {
   padding: 10px 10px;
   text-align: center;
   margin: 1em;
-  width: 150px;
+  width: 160px;
   background-color: #1D80DB;
   cursor: pointer;
   color: #fff;
@@ -519,7 +519,7 @@ nav {
   padding: 10px 10px;
   text-align: center;
   margin: 1em;
-  width: 150px;
+  width: 160px;
   background-color: #1D80DB;
   cursor: pointer;
   color: #fff;

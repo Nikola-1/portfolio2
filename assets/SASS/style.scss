@@ -63,7 +63,7 @@ a{
 
     p,a{
     font-family: 'Open Sans', sans-serif;
-    @extend text;
+    @extend .text;
 }
     h1,h2,h3{
     font-family: 'Montserrat', sans-serif;
@@ -165,7 +165,7 @@ nav{
     padding:10px 10px;
     text-align: center;
     margin:1em ;
-    width: 150px;
+    width: 160px;
     background-color: $background;
     cursor: pointer;
     color: #fff;
@@ -229,7 +229,7 @@ nav{
 }
 .service{
     @include box(20%);
-    @extend text;
+    @extend .text;
 }
 
 .service h3{
